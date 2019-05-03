@@ -1,0 +1,570 @@
+#:kivy 1.10.1
+
+<SmallButton@Button>:
+    padding: (20, 20)
+    padding_color: 1, 1, 0, 1
+
+
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 0.5
+
+            Label:
+                size_hint_x: 9
+
+            Button:
+                size_hint_x: 1
+                background_color: 0,1,0,1
+                on_press:
+                    root.manager.transition.direction = 'right'
+                    root.to_help()
+                Image:
+                    source: './images/other_icon/icon_help.png'
+                    size: self.parent.size
+                    x: self.parent.center_x - self.width/2
+                    y: self.parent.center_y - self.height/2
+
+        Label:
+            size_hint_y: 1
+            text: 'Play As'
+            font_size: 32
+            color: 1,0,0,1
+            font_name: 'chalkduster'
+
+        Label:
+            size_hint_y: 1
+
+        BoxLayout:
+            size_hint_y: 2
+
+            Label:
+                size_hint_x: 1
+
+            Button:
+                size_hint_x: 2
+                background_color: 0,0,1,1
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.survivor_selected()
+                Image:
+                    source: './images/other_icon/icon_survivor.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 1
+
+            Button:
+                size_hint_x: 2
+                background_color: 1,0,0,1
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.killer_selected()
+                Image:
+                    source: './images/other_icon/icon_killer.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 1
+
+        Label:
+            size_hint_y: 1
+
+
+<HelpScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 1
+
+            Button:
+                size_hint_x: 1
+                background_color: 1,1,1,0
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.back_main()
+                Image:
+                    source: './images/other_icon/icon_back.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 9
+
+        Label:
+            size_hint_y: 9
+            text: root.help_sentence
+            # font_name: 'chalkduster'
+            font_size: 18
+            halign: 'left'
+            markup: True
+
+
+
+<SvrConfigScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 1
+
+            Button:
+                size_hint_x: 1
+                background_color: 1,1,1,0
+                on_press:
+                    root.manager.transition.direction = 'up'
+                    root.back_prev()
+                Image:
+                    source: './images/other_icon/icon_back.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 8
+                text: 'Survivor Config'
+                font_size: 28
+                color: 0,0,1,1
+                font_name: 'chalkduster'
+
+            Label:
+                size_hint_x: 1
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Non-Perk Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_1
+                active: False
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Unique Perk Only'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_2
+                active: False
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Non-Item Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_3
+                active: False
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Non-Addon Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_4
+                active: False
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Non-Offering Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_5
+                active: False
+
+
+<KlrConfigScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 1
+
+            Button:
+                size_hint_x: 1
+                background_color: 1,1,1,0
+                on_press:
+                    root.manager.transition.direction = 'up'
+                    root.back_prev()
+                Image:
+                    source: './images/other_icon/icon_back.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 8
+                text: 'Killer Config'
+                font_size: 28
+                color: 1,0,0,1
+                font_name: 'chalkduster'
+
+            Label:
+                size_hint_x: 1
+
+        BoxLayout:
+            size_hint_y: 1.8
+
+            Label:
+                text: 'Non-Perk Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_1
+                active: False
+
+        BoxLayout:
+            size_hint_y: 2.25
+
+            Label:
+                text: 'Unique Perk Only'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_2
+                active: False
+
+        BoxLayout:
+            size_hint_y: 2.25
+
+            Label:
+                text: 'Non-Addon Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_3
+                active: False
+
+        BoxLayout:
+            size_hint_y: 2.25
+
+            Label:
+                text: 'Non-Offering Allowing'
+                font_name: 'chalkduster'
+
+            Switch:
+                id: sw_4
+                active: False
+
+
+<SurvivorScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 1
+
+            SmallButton:
+                size_hint_x: 1
+                background_color: 1,1,1,0
+                on_press:
+                    root.manager.transition.direction = 'right'
+                    root.back_main()
+                Image:
+                    source: './images/other_icon/icon_back.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 6
+
+            SmallButton:
+                size_hint_x: 2
+                text: 'all'
+                background_color: 0,0,1,1
+                font_name: 'chalkduster'
+                font_size: 24
+                on_press: root.all_rand()
+
+            SmallButton:
+                size_hint_x: 1
+                background_color: 0,1,0,1
+                on_press:
+                    root.manager.transition.direction = 'down'
+                    root.to_config()
+                Image:
+                    source: './images/other_icon/icon_config.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+        BoxLayout:
+            size_hint_y: 5
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 0.6
+                    text: 'Perk'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 0,0,1,1
+                    on_press: root.perk_rand()
+
+                BoxLayout:
+                    size_hint_y: 2
+
+                    SmallButton:
+                        on_press: root.perk1_rand()
+                        Image:
+                            source: './images/perk_svr/' + root.perk1_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                    SmallButton:
+                        on_press: root.perk2_rand()
+                        Image:
+                            source: './images/perk_svr/' + root.perk2_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                BoxLayout:
+                    size_hint_y: 2
+
+                    SmallButton:
+                        on_press: root.perk3_rand()
+                        Image:
+                            source: './images/perk_svr/' + root.perk3_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                    SmallButton:
+                        on_press: root.perk4_rand()
+                        Image:
+                            source: './images/perk_svr/' + root.perk4_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+            SmallButton:
+                on_press: root.chara_rand()
+                Image:
+                    source: './images/portrait_svr/' + root.port_src + '.png'
+                    size: self.parent.size
+                    size_hint: None, None
+                    x: self.parent.x
+                    y: self.parent.center_y - self.height/2
+                    keep_ratio: True
+
+        BoxLayout:
+            size_hint_y: 4
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 1
+                    text: 'Item'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 0,0,1,1
+                    on_press: root.item_allrand()
+
+                SmallButton:
+                    size_hint_y: 3
+                    on_press: root.item_rand()
+                    Image:
+                        source: './images/item_svr/' + root.item_src + '.png'
+                        x: self.parent.center_x - self.width/2
+                        y: self.parent.center_y - self.height/2
+                        allow_stretch: True
+
+                BoxLayout:
+                    size_hint_y: 2
+
+                    SmallButton:
+                        on_press: root.addon1_rand()
+                        Image:
+                            source: './images/addon_svr/' + root.addon1_src + '.png'
+                            x: self.parent.center_x - self.width/2
+                            y: self.parent.center_y - self.height/2
+
+                    SmallButton:
+                        on_press: root.addon2_rand()
+                        Image:
+                            source: './images/addon_svr/' + root.addon2_src + '.png'
+                            x: self.parent.center_x - self.width/2
+                            y: self.parent.center_y - self.height/2
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 1
+                    text: 'Offering'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 0,0,1,1
+                    on_press: root.offering_rand()
+
+                SmallButton:
+                    size_hint_y: 5
+                    on_press: root.offering_rand()
+                    Image:
+                        source: './images/offering_svr/' + root.offering_src + '.png'
+                        x: self.parent.center_x - self.width/2
+                        y: self.parent.center_y - self.height/2
+
+
+<KillerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: 1
+
+            SmallButton:
+                size_hint_x: 1
+                background_color: 1,1,1,0
+                on_press:
+                    root.manager.transition.direction = 'right'
+                    root.back_main()
+                Image:
+                    source: './images/other_icon/icon_back.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Label:
+                size_hint_x: 6
+
+            SmallButton:
+                size_hint_x: 2
+                text: 'all'
+                font_name: 'chalkduster'
+                font_size: 24
+                background_color: 1,0,0,1
+                on_press: root.all_rand()
+
+            SmallButton:
+                size_hint_x: 1
+                background_color: 0,1,0,1
+                on_press:
+                    root.manager.transition.direction = 'down'
+                    root.to_config()
+                Image:
+                    source: './images/other_icon/icon_config.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+        BoxLayout:
+            size_hint_y: 5
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 0.6
+                    text: 'Perk'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 1,0,0,1
+                    on_press: root.perk_rand()
+
+                BoxLayout:
+                    size_hint_y: 2
+
+                    SmallButton:
+                        on_press: root.perk1_rand()
+                        Image:
+                            source: './images/perk_klr/' + root.perk1_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                    SmallButton:
+                        on_press: root.perk2_rand()
+                        Image:
+                            source: './images/perk_klr/' + root.perk2_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                BoxLayout:
+                    size_hint_y: 2
+
+                    SmallButton:
+                        on_press: root.perk3_rand()
+                        Image:
+                            source: './images/perk_klr/' + root.perk3_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                    SmallButton:
+                        on_press: root.perk4_rand()
+                        Image:
+                            source: './images/perk_klr/' + root.perk4_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+            SmallButton:
+                on_press: root.chara_rand()
+                Image:
+                    source: './images/portrait_klr/' + root.port_src + '.png'
+                    size: self.parent.size
+                    size_hint: None, None
+                    x: self.parent.x
+                    y: self.parent.center_y - self.height/2
+                    keep_ratio: True
+
+        BoxLayout:
+            size_hint_y: 4
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 1
+                    text: 'Addon'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 1,0,0,1
+                    on_press: root.addon_rand()
+
+                BoxLayout:
+                    size_hint_y: 5
+
+                    SmallButton:
+                        on_press: root.addon1_rand()
+                        Image:
+                            source: './images/addon_klr/' + root.addon1_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+                    SmallButton:
+                        on_press: root.addon2_rand()
+                        Image:
+                            source: './images/addon_klr/' + root.addon2_src + '.png'
+                            center_x: self.parent.center_x
+                            center_y: self.parent.center_y
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                SmallButton:
+                    size_hint_y: 1
+                    text: 'Offering'
+                    font_name: 'chalkduster'
+                    font_size: 24
+                    background_color: 1,0,0,1
+                    on_press: root.offering_rand()
+
+                SmallButton:
+                    size_hint_y: 5
+                    on_press: root.offering_rand()
+                    Image:
+                        source: './images/offering_klr/' + root.offering_src + '.png'
+                        center_x: self.parent.center_x
+                        center_y: self.parent.center_y
