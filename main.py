@@ -1,3 +1,6 @@
+import sys
+import os
+
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition
 from kivy.config import Config
@@ -6,20 +9,22 @@ Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '500')
 Config.set('graphics', 'height', '600')
 from kivy.properties import StringProperty
-
-# from kivy.resources import resource_add_path
-# import sys
-
+from kivy.resources import resource_add_path
 import random
 
 import svr_lists
 import klr_lists
 
-# if hasattr(sys, "_MEIPASS"):
-#     resource_add_path(sys._MEIPASS)
-
+if hasattr(sys, "_MEIPASS"):
+    resource_add_path(sys._MEIPASS)
 
 sm = ScreenManager(transition=SlideTransition())
+
+
+def resource_path(relative):
+    if hasattr(sys, "_MEIPASS"):
+        return os.path.join(sys._MEIPASS, relative)
+    return os.path.join(relative)
 
 
 def DupliCheck(num, *perks):
