@@ -7,16 +7,16 @@ Config.set('graphics', 'width', '500')
 Config.set('graphics', 'height', '600')
 from kivy.properties import StringProperty
 
-from kivy.resources import resource_add_path
-import sys
+# from kivy.resources import resource_add_path
+# import sys
 
 import random
 
 import svr_lists
 import klr_lists
 
-if hasattr(sys, "_MEIPASS"):
-    resource_add_path(sys._MEIPASS)
+# if hasattr(sys, "_MEIPASS"):
+#     resource_add_path(sys._MEIPASS)
 
 
 sm = ScreenManager(transition=SlideTransition())
