@@ -129,9 +129,9 @@ class SurvivorScreen(Screen):
                 tmp_first = 11
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 11, len(svr_lists.svr_perk)-1
+                tmp_first, tmp_last = 11, len(svr_lists.svr_perk) - 1
             else:
-                tmp_last = len(svr_lists.svr_perk)-1
+                tmp_last = len(svr_lists.svr_perk) - 1
 
         self.tmpP1 = \
             random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
@@ -149,9 +149,9 @@ class SurvivorScreen(Screen):
                 tmp_first = 11
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 11, len(svr_lists.svr_perk)-1
+                tmp_first, tmp_last = 11, len(svr_lists.svr_perk) - 1
             else:
-                tmp_last = len(svr_lists.svr_perk)-1
+                tmp_last = len(svr_lists.svr_perk) - 1
 
         self.tmpP2 = \
             random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
@@ -169,9 +169,9 @@ class SurvivorScreen(Screen):
                 tmp_first = 11
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 11, len(svr_lists.svr_perk)-1
+                tmp_first, tmp_last = 11, len(svr_lists.svr_perk) - 1
             else:
-                tmp_last = len(svr_lists.svr_perk)-1
+                tmp_last = len(svr_lists.svr_perk) - 1
 
         self.tmpP3 = \
             random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
@@ -189,9 +189,9 @@ class SurvivorScreen(Screen):
                 tmp_first = 11
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 11, len(svr_lists.svr_perk)-1
+                tmp_first, tmp_last = 11, len(svr_lists.svr_perk) - 1
             else:
-                tmp_last = len(svr_lists.svr_perk)-1
+                tmp_last = len(svr_lists.svr_perk) - 1
 
         self.tmpP4 = \
             random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
@@ -357,7 +357,7 @@ class KillerScreen(Screen):
         sm.current = 'kcfg_scr'
 
     def chara_rand(self):
-        self.killer_num = random.randint(0, len(klr_lists.klr_portrait)-1)
+        self.killer_num = random.randint(0, len(klr_lists.klr_portrait) - 1)
         self.port_src = klr_lists.klr_portrait[self.killer_num]
         self.addon1_src = 'BlankAddon'
         self.addon2_src = 'BlankAddon'
@@ -381,9 +381,9 @@ class KillerScreen(Screen):
                 tmp_first = 12
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 12, len(klr_lists.klr_perk)-1
+                tmp_first, tmp_last = 12, len(klr_lists.klr_perk) - 1
             else:
-                tmp_last = len(klr_lists.klr_perk)-1
+                tmp_last = len(klr_lists.klr_perk) - 1
 
         self.tmpP1 = \
             random.choice(klr_lists.klr_perk[tmp_first:tmp_last:])
@@ -401,9 +401,9 @@ class KillerScreen(Screen):
                 tmp_first = 12
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 12, len(klr_lists.klr_perk)-1
+                tmp_first, tmp_last = 12, len(klr_lists.klr_perk) - 1
             else:
-                tmp_last = len(klr_lists.klr_perk)-1
+                tmp_last = len(klr_lists.klr_perk) - 1
 
         self.tmpP2 = \
             random.choice(klr_lists.klr_perk[tmp_first:tmp_last:])
@@ -421,9 +421,9 @@ class KillerScreen(Screen):
                 tmp_first = 12
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 12, len(klr_lists.klr_perk)-1
+                tmp_first, tmp_last = 12, len(klr_lists.klr_perk) - 1
             else:
-                tmp_last = len(klr_lists.klr_perk)-1
+                tmp_last = len(klr_lists.klr_perk) - 1
 
         self.tmpP3 = \
             random.choice(klr_lists.klr_perk[tmp_first:tmp_last:])
@@ -441,9 +441,9 @@ class KillerScreen(Screen):
                 tmp_first = 12
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 12, len(klr_lists.klr_perk)-1
+                tmp_first, tmp_last = 12, len(klr_lists.klr_perk) - 1
             else:
-                tmp_last = len(klr_lists.klr_perk)-1
+                tmp_last = len(klr_lists.klr_perk) - 1
 
         self.tmpP4 = \
             random.choice(klr_lists.klr_perk[tmp_first:tmp_last:])
