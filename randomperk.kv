@@ -315,22 +315,22 @@
                     font_name: 'chalkduster'
                     font_size: 24
                     background_color: 0,0,1,1
-                    on_press: root.perk_rand()
+                    on_press: root.perk_allrand()
 
                 BoxLayout:
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.perk1_rand()
+                        on_press: root.perk_rand(0)
                         Image:
-                            source: './images/perk_svr/' + root.perk1_src + '.png'
+                            source: './images/perk_svr/' + str(root.perks_src[0]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
                     SmallButton:
-                        on_press: root.perk2_rand()
+                        on_press: root.perk_rand(1)
                         Image:
-                            source: './images/perk_svr/' + root.perk2_src + '.png'
+                            source: './images/perk_svr/' + str(root.perks_src[1]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
@@ -338,23 +338,23 @@
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.perk3_rand()
+                        on_press: root.perk_rand(2)
                         Image:
-                            source: './images/perk_svr/' + root.perk3_src + '.png'
+                            source: './images/perk_svr/' + str(root.perks_src[2]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
                     SmallButton:
-                        on_press: root.perk4_rand()
+                        on_press: root.perk_rand(3)
                         Image:
-                            source: './images/perk_svr/' + root.perk4_src + '.png'
+                            source: './images/perk_svr/' + str(root.perks_src[3]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
             SmallButton:
                 on_press: root.chara_rand()
                 Image:
-                    source: './images/portrait_svr/' + root.port_src + '.png'
+                    source: './images/portrait_svr/' + str(root.port_src) + '.png'
                     size: self.parent.size
                     size_hint: None, None
                     x: self.parent.x
@@ -379,7 +379,7 @@
                     size_hint_y: 3
                     on_press: root.item_rand()
                     Image:
-                        source: './images/item_svr/' + root.item_src + '.png'
+                        source: './images/item_svr/' + str(root.item_src) + '.png'
                         x: self.parent.center_x - self.width/2
                         y: self.parent.center_y - self.height/2
                         allow_stretch: True
@@ -388,16 +388,16 @@
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.addon1_rand()
+                        on_press: root.addon_randnum(0)
                         Image:
-                            source: './images/addon_svr/' + root.addon1_src + '.png'
+                            source: './images/addon_svr/' + str(root.addons_src[0]) + '.png'
                             x: self.parent.center_x - self.width/2
                             y: self.parent.center_y - self.height/2
 
                     SmallButton:
-                        on_press: root.addon2_rand()
+                        on_press: root.addon_randnum(1)
                         Image:
-                            source: './images/addon_svr/' + root.addon2_src + '.png'
+                            source: './images/addon_svr/' + str(root.addons_src[1]) + '.png'
                             x: self.parent.center_x - self.width/2
                             y: self.parent.center_y - self.height/2
 
@@ -416,7 +416,7 @@
                     size_hint_y: 5
                     on_press: root.offering_rand()
                     Image:
-                        source: './images/offering_svr/' + root.offering_src + '.png'
+                        source: './images/offering_svr/' + str(root.offering_src) + '.png'
                         x: self.parent.center_x - self.width/2
                         y: self.parent.center_y - self.height/2
 
@@ -473,22 +473,22 @@
                     font_name: 'chalkduster'
                     font_size: 24
                     background_color: 1,0,0,1
-                    on_press: root.perk_rand()
+                    on_press: root.perk_allrand()
 
                 BoxLayout:
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.perk1_rand()
+                        on_press: root.perk_rand(0)
                         Image:
-                            source: './images/perk_klr/' + root.perk1_src + '.png'
+                            source: './images/perk_klr/' + str(root.perks_src[0]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
                     SmallButton:
-                        on_press: root.perk2_rand()
+                        on_press: root.perk_rand(1)
                         Image:
-                            source: './images/perk_klr/' + root.perk2_src + '.png'
+                            source: './images/perk_klr/' + str(root.perks_src[1]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
@@ -496,23 +496,23 @@
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.perk3_rand()
+                        on_press: root.perk_rand(2)
                         Image:
-                            source: './images/perk_klr/' + root.perk3_src + '.png'
+                            source: './images/perk_klr/' + str(root.perks_src[2]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
                     SmallButton:
-                        on_press: root.perk4_rand()
+                        on_press: root.perk_rand(3)
                         Image:
-                            source: './images/perk_klr/' + root.perk4_src + '.png'
+                            source: './images/perk_klr/' + str(root.perks_src[3]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
             SmallButton:
                 on_press: root.chara_rand()
                 Image:
-                    source: './images/portrait_klr/' + root.port_src + '.png'
+                    source: './images/portrait_klr/' + str(root.port_src) + '.png'
                     size: self.parent.size
                     size_hint: None, None
                     x: self.parent.x
@@ -531,22 +531,22 @@
                     font_name: 'chalkduster'
                     font_size: 24
                     background_color: 1,0,0,1
-                    on_press: root.addon_rand()
+                    on_press: root.addon_allrand()
 
                 BoxLayout:
                     size_hint_y: 5
 
                     SmallButton:
-                        on_press: root.addon1_rand()
+                        on_press: root.addon_rand(0)
                         Image:
-                            source: './images/addon_klr/' + root.addon1_src + '.png'
+                            source: './images/addon_klr/' + str(root.addons_src[0]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
                     SmallButton:
-                        on_press: root.addon2_rand()
+                        on_press: root.addon_rand(1)
                         Image:
-                            source: './images/addon_klr/' + root.addon2_src + '.png'
+                            source: './images/addon_klr/' + str(root.addons_src[1]) + '.png'
                             center_x: self.parent.center_x
                             center_y: self.parent.center_y
 
@@ -565,6 +565,6 @@
                     size_hint_y: 5
                     on_press: root.offering_rand()
                     Image:
-                        source: './images/offering_klr/' + root.offering_src + '.png'
+                        source: './images/offering_klr/' + str(root.offering_src) + '.png'
                         center_x: self.parent.center_x
                         center_y: self.parent.center_y

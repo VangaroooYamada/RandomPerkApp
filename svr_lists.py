@@ -66,7 +66,7 @@ svr_addon = [
         'MilkyGlass', 'BloodAmber',
         'BlankAddon',
     ],
-    [ # Map
+    [  # Map
         'MapAddendum', 'YellowWire', 'UnusualStamp',
         'RetardantJelly', 'RedTwine', 'GlassBead',
         'OddStamp', 'BlackSilkCord', 'CrystalBead',
