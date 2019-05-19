@@ -387,14 +387,14 @@
                     size_hint_y: 2
 
                     SmallButton:
-                        on_press: root.addon_randnum(0)
+                        on_press: root.addon_rand(0)
                         Image:
                             source: './images/addon_svr/' + str(root.addons_src[0]) + '.png'
                             x: self.parent.center_x - self.width/2
                             y: self.parent.center_y - self.height/2
 
                     SmallButton:
-                        on_press: root.addon_randnum(1)
+                        on_press: root.addon_rand(1)
                         Image:
                             source: './images/addon_svr/' + str(root.addons_src[1]) + '.png'
                             x: self.parent.center_x - self.width/2
