@@ -160,60 +160,30 @@ class SurvivorScreen(Screen):
         self.addons_src[1] = 'BlankAddon'
 
     def addon_rand(self, num):
+        item_num = 5
+
         if self.item_src.startswith('Flashlight'):
-            if sm.get_screen('scfg_scr').ids['sw_4'].active:
-                self.tmpA[0] = random.choice(svr_lists.svr_addon[0])
-            else:
-                self.tmpA[0] = random.choice(svr_lists.svr_addon[0][:-1:])
-
-            if self.tmpA[0] == self.tmpA[1]:
-                self.addon_rand(num)
-            else:
-                self.addons_src[num] = self.tmpA[num]
-
+            item_num = 0
         elif self.item_src.startswith('Key'):
-            if sm.get_screen('scfg_scr').ids['sw_4'].active:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[1])
-            else:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[1][:-1:])
-
-            if self.tmpA[0] == self.tmpA[1]:
-                self.addon_rand(num)
-            else:
-                self.addons_src[num] = self.tmpA[num]
-
+            item_num = 1
         elif self.item_src.startswith('Map'):
-            if sm.get_screen('scfg_scr').ids['sw_4'].active:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[2])
-            else:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[2][:-1:])
-
-            if self.tmpA[0] == self.tmpA[1]:
-                self.addon_rand(num)
-            else:
-                self.addons_src[num] = self.tmpA[num]
-
+            item_num = 2
         elif self.item_src.startswith('MedKit'):
-            if sm.get_screen('scfg_scr').ids['sw_4'].active:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[3])
-            else:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[3][:-1:])
-
-            if self.tmpA[0] == self.tmpA[1]:
-                self.addon_rand(num)
-            else:
-                self.addons_src[num] = self.tmpA[num]
-
+            item_num = 3
         elif self.item_src.startswith('ToolBox'):
-            if sm.get_screen('scfg_scr').ids['sw_4'].active:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[4])
-            else:
-                self.tmpA[num] = random.choice(svr_lists.svr_addon[4][:-1:])
+            item_num = 4
+        else:
+            return
 
-            if self.tmpA[0] == self.tmpA[1]:
-                self.addon_rand(num)
-            else:
-                self.addons_src[num] = self.tmpA[num]
+        if sm.get_screen('scfg_scr').ids['sw_4'].active:
+            self.tmpA[num] = random.choice(svr_lists.svr_addon[item_num])
+        else:
+            self.tmpA[num] = random.choice(svr_lists.svr_addon[item_num][:-1:])
+
+        if self.tmpA[0] == self.tmpA[1]:
+            self.addon_rand(num)
+        else:
+            self.addons_src[num] = self.tmpA[num]
 
     def offering_rand(self):
         if sm.get_screen('scfg_scr').ids['sw_5'].active:
