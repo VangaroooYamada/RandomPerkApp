@@ -70,14 +70,14 @@ class HelpScreen(Screen):
         '   [b]"All" Button[/b]: shuffle all\n'
         '\n'
         '   You can set up detailed Settings in Config menu.\n'
-        '   Config menu can open by up-right Button.\n'
+        '   Please open Config menu by up-right Button.\n'
         '\n'
         '[size=24][b]Contact[/b][/size]\n'
         '   e-mail: vangarooo.yamada@gmail.com\n'
         '   I\'d like to get your feedback.\n'
         '\n'
         '\n'
-        '[size=14]version: 1.0.0-beta[/size]'
+        '[size=14]version: 1.0.1-beta[/size]'
     )
 
     def back_main(self):
@@ -139,6 +139,16 @@ class SurvivorScreen(Screen):
 
         self.tmpP[num] = \
             random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
+
+        if not (sm.get_screen('scfg_scr').ids['sw_6'].active):
+            if self.tmpP[num] == 'SprintBurst':
+                if 'DeadHard' in self.tmpP or 'Lithe' in self.tmpP:
+                    self.perk_rand(num)
+                    return
+            elif self.tmpP[num] == 'DeadHard' or self.tmpP[num] == 'Lithe':
+                if 'SprintBurst' in self.tmpP:
+                    self.perk_rand(num)
+                    return
 
         if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'BlankPerk'):
             self.perks_src[num] = self.tmpP[num]
