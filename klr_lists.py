@@ -194,7 +194,7 @@ klr_addon = [
         'NightVisionMonocular', 'DropLegKnifeSheath', 'DriversLicense',
         'GhostFaceCaughtOnTape', 'OutdoorSecurityCamera',
         'BlankAddon',
-    ]
+    ],
 ]
 
 klr_offering = [
