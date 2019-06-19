@@ -6,7 +6,7 @@ klr_portrait = [
     'Cannibal', 'Nightmare',
     'Pig', 'Crown',
     'Spirit', 'Legion',
-    'Plague', 'Ghost',
+    'Plague',
 ]
 
 klr_perk = [
@@ -28,9 +28,8 @@ klr_perk = [
     'HangmansTrick', 'Surveillance', 'MakeYourChoice',
     'Bamboozle', 'Coulrophobia', 'PopGoesTheWeasel',
     'SpiritFury', 'HexHauntedGround', 'Rancor',
-    'Discordance', 'MadGrit', 'IronMaiden',
-    'CorruptIntervention', 'InfectiousFright', 'DarkDevotion',
-    'ImAllEars', 'ThrillingTremors', 'FurtiveChase',
+    'Discordance', 'MadGrit', 'IronMaiden', 'CorruptIntervention',
+    'InfectiousFright', 'DarkDevotion',
     'BlankPerk',
 ]
 
@@ -185,16 +184,6 @@ klr_addon = [
         'IridescentSeal', 'BlackIncense',
         'BlankAddon',
     ],
-    [  # Ghost
-        'Philly', 'WalleyesMatchbook', 'HeadlinesCutouts',
-        'CheapCologne', 'TelephotoLens', 'ReusableCinchStraps',
-        'OlsensJournal', 'OlsensAddressBook', 'MarkedMap',
-        'OlsensWallet', 'LeatherKnifeSheath', 'LastingPerfume',
-        'KnifeBeltClip', 'ChewedPen', 'VictimsDetailedRoutine',
-        'NightVisionMonocular', 'DropLegKnifeSheath', 'DriversLicense',
-        'GhostFaceCaughtOnTape', 'OutdoorSecurityCamera',
-        'BlankAddon',
-    ]
 ]
 
 klr_offering = [
