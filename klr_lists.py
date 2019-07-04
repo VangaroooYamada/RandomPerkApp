@@ -6,7 +6,7 @@ klr_portrait = [
     'Cannibal', 'Nightmare',
     'Pig', 'Crown',
     'Spirit', 'Legion',
-    'Plague', 'Ghost',
+    'Plague', 'GhostFace',
 ]
 
 klr_perk = [
@@ -185,7 +185,7 @@ klr_addon = [
         'IridescentSeal', 'BlackIncense',
         'BlankAddon',
     ],
-    [  # Ghost
+    [  # GhostFace
         'Philly', 'WalleyesMatchbook', 'HeadlinesCutouts',
         'CheapCologne', 'TelephotoLens', 'ReusableCinchStraps',
         'OlsensJournal', 'OlsensAddressBook', 'MarkedMap',
