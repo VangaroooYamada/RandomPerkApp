@@ -77,7 +77,7 @@ class HelpScreen(Screen):
         '   I\'d like to get your feedback.\n'
         '\n'
         '\n'
-        '[size=14]version: 1.0.1-beta[/size]'
+        '[size=14]version: 1.0.2-beta[/size]'
     )
 
     def back_main(self):
