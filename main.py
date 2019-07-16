@@ -127,11 +127,16 @@ class SurvivorScreen(Screen):
             self.perk_rand(i)
 
     def perk_rand(self, num):
-        perk_list = \
-            svr_lists.svr_perkC + svr_lists.svr_perkU + svr_lists.svr_blank
+        blankP = 2 * (sm.get_screen('scfg_scr').ids['pb_1'].state == 'down')\
+            + 4 * (sm.get_screen('scfg_scr').ids['pb_2'].state == 'down')\
+            + 10 * (sm.get_screen('scfg_scr').ids['pb_3'].state == 'down')
+
+        perk_list = svr_lists.svr_perkC + svr_lists.svr_perkU\
+            + svr_lists.svr_blank * blankP
+
         if sm.get_screen('scfg_scr').ids['sw_1'].active:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                perk_list = svr_lists.svr_perkU + svr_lists.svr_blank
+                perk_list = svr_lists.svr_perkU + svr_lists.svr_blank * blankP
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
                 perk_list = svr_lists.svr_perkU
@@ -240,11 +245,16 @@ class KillerScreen(Screen):
             self.perk_rand(i)
 
     def perk_rand(self, num):
-        perk_list = \
-            klr_lists.klr_perkC + klr_lists.klr_perkU + klr_lists.klr_blank
+        blankP = 2 * (sm.get_screen('kcfg_scr').ids['pb_1'].state == 'down')\
+            + 4 * (sm.get_screen('kcfg_scr').ids['pb_2'].state == 'down')\
+            + 10 * (sm.get_screen('kcfg_scr').ids['pb_3'].state == 'down')
+
+        perk_list = klr_lists.klr_perkC + klr_lists.klr_perkU\
+            + klr_lists.klr_blank * blankP
+
         if sm.get_screen('kcfg_scr').ids['sw_1'].active:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                perk_list = klr_lists.klr_perkU + klr_lists.klr_blank
+                perk_list = klr_lists.klr_perkU + klr_lists.klr_blank * blankP
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
                 perk_list = klr_lists.klr_perkU

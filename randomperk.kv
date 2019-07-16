@@ -5,6 +5,10 @@
     padding_color: 1, 1, 0, 1
 
 
+<PerkButton@ToggleButton>:
+    group: 'sperk'
+
+
 <MainScreen>:
     BoxLayout:
         orientation: 'vertical'
@@ -138,78 +142,104 @@
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
                 text: 'Non-Perk Allowing'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_1
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
         BoxLayout:
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
+                text: 'Non-Perk rate'
+                font_name: 'chalkduster'
+
+            BoxLayout:
+                size_hint_x: 4
+
+                PerkButton:
+                    id: pb_1
+                    text: 'FEW'
+                    state: 'normal'
+
+                PerkButton:
+                    id: pb_2
+                    text: 'MEDIUM'
+                    state: 'down'
+
+                PerkButton:
+                    id: pb_3
+                    text: 'MANY'
+                    state: 'normal'
+
+        BoxLayout:
+            size_hint_y: 1.5
+
+            Label:
+                size_hint_x: 6
                 text: 'Unique Perk Only'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_2
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
         BoxLayout:
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
                 text: 'Non-Item Allowing'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_3
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
         BoxLayout:
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
                 text: 'Non-Addon Allowing'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_4
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
         BoxLayout:
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
                 text: 'Non-Offering Allowing'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_5
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
         BoxLayout:
             size_hint_y: 1.5
 
             Label:
-                size_hint_x: 7
+                size_hint_x: 6
                 text: 'Exhausted-SprintBurst Allowing'
                 font_name: 'chalkduster'
 
             Switch:
                 id: sw_6
-                size_hint_x: 3
+                size_hint_x: 4
                 active: False
 
 
@@ -253,6 +283,32 @@
                 id: sw_1
                 size_hint_x: 3
                 active: False
+
+        BoxLayout:
+            size_hint_y: 2.25
+
+            Label:
+                size_hint_x: 6
+                text: 'Non-Perk rate'
+                font_name: 'chalkduster'
+
+            BoxLayout:
+                size_hint_x: 4
+
+                PerkButton:
+                    id: pb_1
+                    text: 'FEW'
+                    state: 'normal'
+
+                PerkButton:
+                    id: pb_2
+                    text: 'MEDIUM'
+                    state: 'down'
+
+                PerkButton:
+                    id: pb_3
+                    text: 'MANY'
+                    state: 'normal'
 
         BoxLayout:
             size_hint_y: 2.25
