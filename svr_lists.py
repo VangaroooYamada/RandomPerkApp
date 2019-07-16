@@ -35,9 +35,6 @@ svr_perkU = [
     'Solidarity', 'Poised', 'HeadOn',
     'FlipFlop', 'BuckleUp', 'MettleOfMan',
 ]
-svr_perkB = [
-    'BlankPerk',
-] * 4
 
 svr_item = [
     'ChineseFirecracker',
@@ -52,7 +49,6 @@ svr_item = [
     'ToolBoxC', 'ToolBoxUC',
     'ToolBoxR1', 'ToolBoxR2',
     'ToolBoxVR1', 'ToolBoxVR2',
-    'BlankItem',
 ]
 
 svr_addon = [
@@ -62,19 +58,16 @@ svr_addon = [
         'LowAmpFilament', 'HeavyDutyBattery',
         'FocusLens', 'LongLifeBattery', 'IntenseHalogen',
         'HighEndSapphireLens', 'OddBulb',
-        'BlankAddon',
     ],
     [  # Key
         'PrayerRope', 'ScratchedPearl', 'PrayerBeads',
         'ErodedToken', 'GoldToken', 'WeavedRing',
         'MilkyGlass', 'BloodAmber',
-        'BlankAddon',
     ],
     [  # Map
         'MapAddendum', 'YellowWire', 'UnusualStamp',
         'RetardantJelly', 'RedTwine', 'GlassBead',
         'OddStamp', 'BlackSilkCord', 'CrystalBead',
-        'BlankAddon',
     ],
     [  # MedKit
         'RubberGloves', 'ButterflyTape', 'Bandages',
@@ -82,14 +75,12 @@ svr_addon = [
         'MedicalScissors', 'GauzeRoll', 'SurgicalSuture',
         'GelDressings', 'AbdominalDressing',
         'StypticAgent', 'AntiHaemorrhagicSyringe',
-        'BlankAddon',
     ],
     [  # ToolBox
         'SpringClamp', 'Scraps', 'CleanRag',
         'WireSpool', 'SocketSwivels', 'ProtectiveGloves',
         'Instructions', 'GripWrench', 'CuttingWire',
         'Hacksaw', 'BrandNewPart',
-        'BlankAddon',
     ],
 ]
 
@@ -103,5 +94,8 @@ svr_offering = [
     'MapAsylum', 'MapHaddon', 'MapSwamp',
     'MapLery', 'MapRedForest', 'MapSpringWood',
     'MapGideon', 'MapYamaoka', 'MapOrmond',
-    'BlankOffering',
+]
+
+svr_blank = [
+    'Blank',
 ]

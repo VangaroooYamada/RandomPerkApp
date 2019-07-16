@@ -77,7 +77,7 @@ class HelpScreen(Screen):
         '   I\'d like to get your feedback.\n'
         '\n'
         '\n'
-        '[size=14]version: 1.0.1-beta[/size]'
+        '[size=14]version: 1.0.3-beta[/size]'
     )
 
     def back_main(self):
@@ -98,11 +98,11 @@ class KlrConfigScreen(Screen):
 
 class SurvivorScreen(Screen):
 
-    perks_src = ListProperty(['BlankPerk'] * 4)
+    perks_src = ListProperty(['Blank'] * 4)
     port_src = StringProperty('Unknown')
-    item_src = StringProperty('BlankItem')
-    addons_src = ListProperty(['BlankAddon'] * 2)
-    offering_src = StringProperty('BlankOffering')
+    item_src = StringProperty('Blank')
+    addons_src = ListProperty(['Blank'] * 2)
+    offering_src = StringProperty('Blank')
 
     tmpP = [''] * 4
     tmpA = [''] * 2
@@ -128,10 +128,10 @@ class SurvivorScreen(Screen):
 
     def perk_rand(self, num):
         perk_list = \
-            svr_lists.svr_perkC + svr_lists.svr_perkU + svr_lists.svr_perkB
+            svr_lists.svr_perkC + svr_lists.svr_perkU + svr_lists.svr_blank
         if sm.get_screen('scfg_scr').ids['sw_1'].active:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                perk_list = svr_lists.svr_perkU + svr_lists.svr_perkB
+                perk_list = svr_lists.svr_perkU + svr_lists.svr_blank
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
                 perk_list = svr_lists.svr_perkU
@@ -151,7 +151,7 @@ class SurvivorScreen(Screen):
                     self.perk_rand(num)
                     return
 
-        if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'BlankPerk'):
+        if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'Blank'):
             self.perks_src[num] = self.tmpP[num]
         else:
             self.perk_rand(num)
@@ -163,12 +163,13 @@ class SurvivorScreen(Screen):
 
     def item_rand(self):
         if sm.get_screen('scfg_scr').ids['sw_3'].active:
-            self.item_src = random.choice(svr_lists.svr_item)
+            self.item_src = random.choice(
+                svr_lists.svr_item + svr_lists.svr_blank)
         else:
-            self.item_src = random.choice(svr_lists.svr_item[:-1:])
+            self.item_src = random.choice(svr_lists.svr_item)
 
-        self.addons_src[0] = 'BlankAddon'
-        self.addons_src[1] = 'BlankAddon'
+        self.addons_src[0] = 'Blank'
+        self.addons_src[1] = 'Blank'
 
     def addon_rand(self, num):
         item_num = 5
@@ -187,9 +188,10 @@ class SurvivorScreen(Screen):
             return
 
         if sm.get_screen('scfg_scr').ids['sw_4'].active:
-            self.tmpA[num] = random.choice(svr_lists.svr_addon[item_num])
+            self.tmpA[num] = random.choice(
+                svr_lists.svr_addon[item_num] + svr_lists.svr_blank)
         else:
-            self.tmpA[num] = random.choice(svr_lists.svr_addon[item_num][:-1:])
+            self.tmpA[num] = random.choice(svr_lists.svr_addon[item_num])
 
         if self.tmpA[0] == self.tmpA[1]:
             self.addon_rand(num)
@@ -198,17 +200,18 @@ class SurvivorScreen(Screen):
 
     def offering_rand(self):
         if sm.get_screen('scfg_scr').ids['sw_5'].active:
-            self.offering_src = random.choice(svr_lists.svr_offering)
+            self.offering_src = random.choice(
+                svr_lists.svr_offering + svr_lists.svr_blank)
         else:
-            self.offering_src = random.choice(svr_lists.svr_offering[:-1:])
+            self.offering_src = random.choice(svr_lists.svr_offering)
 
 
 class KillerScreen(Screen):
 
-    perks_src = ListProperty(['BlankPerk'] * 4)
+    perks_src = ListProperty(['Blank'] * 4)
     port_src = StringProperty('Unknown')
-    addons_src = ListProperty(['BlankAddon'] * 2)
-    offering_src = StringProperty('BlankOffering')
+    addons_src = ListProperty(['Blank'] * 2)
+    offering_src = StringProperty('Blank')
 
     tmpP = [''] * 4
     tmpA = [''] * 2
@@ -223,8 +226,8 @@ class KillerScreen(Screen):
     def chara_rand(self):
         self.killer_num = random.randint(0, len(klr_lists.klr_portrait) - 1)
         self.port_src = klr_lists.klr_portrait[self.killer_num]
-        self.addons_src[0] = 'BlankAddon'
-        self.addons_src[1] = 'BlankAddon'
+        self.addons_src[0] = 'Blank'
+        self.addons_src[1] = 'Blank'
 
     def all_rand(self):
         self.chara_rand()
@@ -238,10 +241,10 @@ class KillerScreen(Screen):
 
     def perk_rand(self, num):
         perk_list = \
-            klr_lists.klr_perkC + klr_lists.klr_perkU + klr_lists.klr_perkB
+            klr_lists.klr_perkC + klr_lists.klr_perkU + klr_lists.klr_blank
         if sm.get_screen('kcfg_scr').ids['sw_1'].active:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                perk_list = klr_lists.klr_perkU + klr_lists.klr_perkB
+                perk_list = klr_lists.klr_perkU + klr_lists.klr_blank
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
                 perk_list = klr_lists.klr_perkU
@@ -251,7 +254,7 @@ class KillerScreen(Screen):
         self.tmpP[num] = \
             random.choice(perk_list)
 
-        if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'BlankPerk'):
+        if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'Blank'):
             self.perks_src[num] = self.tmpP[num]
         else:
             self.perk_rand(num)
@@ -266,21 +269,23 @@ class KillerScreen(Screen):
 
         if sm.get_screen('kcfg_scr').ids['sw_3'].active:
             self.tmpA[num] = \
-                random.choice(klr_lists.klr_addon[self.killer_num])
+                random.choice(
+                    klr_lists.klr_addon[self.killer_num] + klr_lists.klr_blank)
         else:
             self.tmpA[num] = \
-                random.choice(klr_lists.klr_addon[self.killer_num][:-1])
+                random.choice(klr_lists.klr_addon[self.killer_num])
 
-        if self.tmpA[0] == self.tmpA[1] and self.tmpA[num] != 'BlankAddon':
+        if self.tmpA[0] == self.tmpA[1] and self.tmpA[num] != 'Blank':
             self.addon_rand(num)
         else:
             self.addons_src[num] = self.tmpA[num]
 
     def offering_rand(self):
         if sm.get_screen('kcfg_scr').ids['sw_4'].active:
-            self.offering_src = random.choice(klr_lists.klr_offering)
+            self.offering_src = random.choice(
+                klr_lists.klr_offering + klr_lists.klr_blank)
         else:
-            self.offering_src = random.choice(klr_lists.klr_offering[:-1:])
+            self.offering_src = random.choice(klr_lists.klr_offering)
 
 
 class RandomPerkApp(App):

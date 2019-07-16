@@ -34,9 +34,6 @@ klr_perkU = [
     'CorruptIntervention', 'InfectiousFright', 'DarkDevotion',
     'ImAllEars', 'ThrillingTremors', 'FurtiveChase',
 ]
-klr_perkB = [
-    'BlankPerk'
-] * 4
 
 klr_addon = [
     [  # Trapper
@@ -47,7 +44,6 @@ klr_addon = [
         'SecondaryCoil', 'RustedJaws', 'StitchedBag',
         'OilyCoil', 'honingStone', 'FasteningTools',
         'IridescentStone', 'BloodyCoil',
-        'BlankAddon',
     ],
     [  # Wraith
         'TheSerpentSoot', 'TheHoundSoot', 'TheGhostSoot',
@@ -57,7 +53,6 @@ klr_addon = [
         'BlinkWhite', 'BlindWarriorWhite', 'WindstormBlood',
         'SwiftHuntBlood', 'ShadowDanceBlood', 'AllSeeingBlood',
         'CoxcombedClapper', 'AllSeeingSpirit',
-        'BlankAddon',
     ],
     [  # Hillbilly
         'VegetableOil', 'SparkPlug', 'ChainsawFile',
@@ -67,7 +62,6 @@ klr_addon = [
         'TheThompsonsMix', 'RustedChains', 'LightChassis',
         'DoomEngravings', 'CarburettorTuningGuide',
         'ThompsonsMoonshine', 'BegrimedChains',
-        'BlankAddon',
     ],
     [  # Nurse
         'WoodenHorse', 'WhiteNitComb', 'TornBookmark',
@@ -77,7 +71,6 @@ klr_addon = [
         'FragileWheeze', 'AtaxicRespiration', 'AnxiousGasp',
         'PlaidFlannel', 'KavanaghsLastBreath', 'JennersLastBreath',
         'CampbellsLastBreath', 'BadMansLastBreath',
-        'BlankAddon',
     ],
     [  # Shape
         'TackyEarrings', 'BoyfriendsMemo', 'BlondHair',
@@ -96,7 +89,6 @@ klr_addon = [
         'CrackedTurtleEgg', 'BloodiedMud', 'ScarredHand',
         'RustyShackles', 'GranmasHeart', 'DisfiguredEar',
         'WaterloggedShoe', 'MintRag',
-        'BlankAddon',
     ],
     [  # Doctor
         'MouldyElectrode', 'MapleKnight', 'OrderClassI',
@@ -107,7 +99,6 @@ klr_addon = [
         'RestraintCartersNotes', 'OrderCartersNotes',
         'ObedienceCartersNotes', 'DisciplineCartersNotes',
         'CalmCartersNotes', 'IridescentKing',
-        'BlankAddon',
     ],
     [  # Huntress
         'CoarseStone', 'BerusToxin', 'BandagedHaft',
@@ -117,7 +108,6 @@ klr_addon = [
         'VenomousConcoction', 'RustyHead', 'PungentPhial',
         'FlowerBabushka', 'InfantryBelt', 'GlowingConcoction',
         'BegrimedHead', 'IridescentHead',
-        'BlankAddon',
     ],
     [  # Cannibal
         'VegetableOil', 'SparkPlug', 'ChainsawFile',
@@ -127,7 +117,6 @@ klr_addon = [
         'TheGrease', 'TheBeastsMarks', 'RustedChains',
         'LightChassis', 'CarburettorTuningGuide',
         'BegrimedChains', 'AwardWinningChilli',
-        'BlankAddon',
     ],
     [  # Nightmare
         'WoolShirt', 'SheepBlock', 'KidsDrawing',
@@ -137,7 +126,6 @@ klr_addon = [
         'JumpRope', 'BlueDress', 'PillBottle',
         'PaintThinner', 'ClassPhoto', 'ZBlock',
         'RedPaintBrush', 'BlackBox',
-        'BlankAddon',
     ],
     [  # Pig
         'WorkshopGrease', 'ShatteredSyringe', 'JohnsMedicalFile',
@@ -147,7 +135,6 @@ klr_addon = [
         'InterlockingRazor', 'BagOfGears', 'TamperedTimer',
         'JigsawsSketch', 'CrateOfGears', 'AmandasSecret',
         'RulesSetNo2', 'AmandasLetter',
-        'BlankAddon',
     ],
     [  # Crown
         'SmellyInnerSoles', 'RobinFeather', 'FingerlessParadeGloves',
@@ -157,7 +144,6 @@ klr_addon = [
         'Ether10Vol', 'BottleOfChloroform', 'GarishMakeUpKit',
         'Ether15Vol', 'CigarBox', 'CheapGinBottle',
         'TattoosMiddleFinger', 'RedheadsPinkyFinger',
-        'BlankAddon',
     ],
     [  # Spirit
         'Zori', 'ShiawaseAmulet', 'OrigamiCrane',
@@ -167,7 +153,6 @@ klr_addon = [
         'DirtyUwabaki', 'BloodyHairBrooch', 'YakuyokeAmulet',
         'WakizashiSaya', 'PrayerBeadsBracelet', 'DriedCherryBlossom',
         'MotherDaughterRing', 'FathersGlasses',
-        'BlankAddon',
     ],
     [  # Legion
         'SmileyFacePin', 'ScratchedRuler', 'MischiefList',
@@ -177,7 +162,6 @@ klr_addon = [
         'NastyBlade', 'JoeysMixTape', 'StabWoundsStudy',
         'FranksMixTape', 'FilthyBlade', 'ColdDirt',
         'IridescentButton', 'FumingMixTape',
-        'BlankAddon',
     ],
     [  # Plague
         'PrayerTabletFragment', 'OlibanumIncense', 'LimestoneSeal',
@@ -187,7 +171,6 @@ klr_addon = [
         'ExorcismAmulet', 'AshenApple', 'WorshipTablet',
         'VileEmetic', 'SeveredToe', 'DevoteesAmulet',
         'IridescentSeal', 'BlackIncense',
-        'BlankAddon',
     ],
     [  # GhostFace
         'Philly', 'WalleyesMatchbook', 'HeadlinesCutouts',
@@ -197,7 +180,6 @@ klr_addon = [
         'KnifeBeltClip', 'ChewedPen', 'VictimsDetailedRoutine',
         'NightVisionMonocular', 'DropLegKnifeSheath', 'DriversLicense',
         'GhostFaceCaughtOnTape', 'OutdoorSecurityCamera',
-        'BlankAddon',
     ],
 ]
 
@@ -211,5 +193,8 @@ klr_offering = [
     'MapAsylum', 'MapHaddon', 'MapSwamp',
     'MapLery', 'MapRedForest', 'MapSpringWood',
     'MapGideon', 'MapYamaoka', 'MapOrmond',
-    'BlankOffering',
+]
+
+klr_blank = [
+    'Blank',
 ]
