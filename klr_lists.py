@@ -9,12 +9,14 @@ klr_portrait = [
     'Plague', 'GhostFace',
 ]
 
-klr_perk = [
+klr_perkC = [
     'BitterMurmur', 'Deerstalker', 'Distressing',
     'HexNoOneEscapesDeath', 'HexThrillOfTheHunt',
     'Insidious', 'IronGrasp', 'MonstrousShrine',
     'SloppyButcher', 'SpiesFromTheShadows',
     'Unrelenting', 'Whispers',
+]
+klr_perkU = [
     'UnnervingPresence', 'BrutalStrength', 'Agitation',
     'Predator', 'Bloodhound', 'Shadowborn',
     'Enduring', 'Lightborn', 'Tinkerer',
@@ -31,8 +33,10 @@ klr_perk = [
     'Discordance', 'MadGrit', 'IronMaiden',
     'CorruptIntervention', 'InfectiousFright', 'DarkDevotion',
     'ImAllEars', 'ThrillingTremors', 'FurtiveChase',
-    'BlankPerk',
 ]
+klr_perkB = [
+    'BlankPerk'
+] * 4
 
 klr_addon = [
     [  # Trapper

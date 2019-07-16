@@ -127,18 +127,19 @@ class SurvivorScreen(Screen):
             self.perk_rand(i)
 
     def perk_rand(self, num):
-        tmp_first, tmp_last = 0, len(svr_lists.svr_perk)
+        perk_list = \
+            svr_lists.svr_perkC + svr_lists.svr_perkU + svr_lists.svr_perkB
         if sm.get_screen('scfg_scr').ids['sw_1'].active:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first = 11
+                perk_list = svr_lists.svr_perkU + svr_lists.svr_perkB
         else:
             if sm.get_screen('scfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 11, len(svr_lists.svr_perk) - 1
+                perk_list = svr_lists.svr_perkU
             else:
-                tmp_last = len(svr_lists.svr_perk) - 1
+                perk_list = svr_lists.svr_perkC + svr_lists.svr_perkU
 
         self.tmpP[num] = \
-            random.choice(svr_lists.svr_perk[tmp_first:tmp_last:])
+            random.choice(perk_list)
 
         if not (sm.get_screen('scfg_scr').ids['sw_6'].active):
             if self.tmpP[num] == 'SprintBurst':
@@ -236,18 +237,19 @@ class KillerScreen(Screen):
             self.perk_rand(i)
 
     def perk_rand(self, num):
-        tmp_first, tmp_last = 0, len(klr_lists.klr_perk)
+        perk_list = \
+            klr_lists.klr_perkC + klr_lists.klr_perkU + klr_lists.klr_perkB
         if sm.get_screen('kcfg_scr').ids['sw_1'].active:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first = 12
+                perk_list = klr_lists.klr_perkU + klr_lists.klr_perkB
         else:
             if sm.get_screen('kcfg_scr').ids['sw_2'].active:
-                tmp_first, tmp_last = 12, len(klr_lists.klr_perk) - 1
+                perk_list = klr_lists.klr_perkU
             else:
-                tmp_last = len(klr_lists.klr_perk) - 1
+                perk_list = klr_lists.klr_perkC + klr_lists.klr_perkU
 
         self.tmpP[num] = \
-            random.choice(klr_lists.klr_perk[tmp_first:tmp_last:])
+            random.choice(perk_list)
 
         if (DupliCheck(num, self.tmpP) or self.tmpP[num] == 'BlankPerk'):
             self.perks_src[num] = self.tmpP[num]
@@ -267,7 +269,7 @@ class KillerScreen(Screen):
                 random.choice(klr_lists.klr_addon[self.killer_num])
         else:
             self.tmpA[num] = \
-                random.choice(klr_lists.klr_addon[self.killer_num][:-1:])
+                random.choice(klr_lists.klr_addon[self.killer_num][:-1])
 
         if self.tmpA[0] == self.tmpA[1] and self.tmpA[num] != 'BlankAddon':
             self.addon_rand(num)

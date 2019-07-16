@@ -10,11 +10,13 @@ svr_portrait = [
     'Ash',
 ]
 
-svr_perk = [
+svr_perkC = [
     'DarkSense', 'Hope', 'LightWeight',
     'NoOneLeftBehind', 'PlunderersInstinct',
     'Premonition', 'Resilience', 'SlipperyMeat',
     'SmallGame', 'SpineChill', 'ThisIsNotHappening',
+]
+svr_perkU = [
     'Bond', 'ProveThyself', 'Leader',
     'QuickAndQuiet', 'SprintBurst', 'Adrenaline',
     'Empathy', 'BotanyKnowledge', 'SelfCare',
@@ -32,8 +34,10 @@ svr_perk = [
     'Breakdown', 'AfterCare', 'Distortion',
     'Solidarity', 'Poised', 'HeadOn',
     'FlipFlop', 'BuckleUp', 'MettleOfMan',
-    'BlankPerk',
 ]
+svr_perkB = [
+    'BlankPerk',
+] * 4
 
 svr_item = [
     'ChineseFirecracker',
