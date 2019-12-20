@@ -195,6 +195,12 @@ klr_addon = [
         'GhostFaceCaughtOnTape', 'OutdoorSecurityCamera',
         'BlankAddon',
     ],
+    [  # Demogorgon
+        'BlankAddon',
+    ],
+    [  # Oni
+        'BlankAddon',
+    ],
 ]
 
 klr_offering = [
