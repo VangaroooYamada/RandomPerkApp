@@ -7,14 +7,17 @@ svr_portrait = [
     'Tapp', 'Smith',
     'Kate', 'Adam',
     'Jeff', 'Romero',
-    'Ash',
+    'Ash', 'Nancy',
+    'Steve', 'Yui',
 ]
 
-svr_perk = [
+svr_perkC = [
     'DarkSense', 'Hope', 'LightWeight',
     'NoOneLeftBehind', 'PlunderersInstinct',
     'Premonition', 'Resilience', 'SlipperyMeat',
     'SmallGame', 'SpineChill', 'ThisIsNotHappening',
+]
+svr_perkU = [
     'Bond', 'ProveThyself', 'Leader',
     'QuickAndQuiet', 'SprintBurst', 'Adrenaline',
     'Empathy', 'BotanyKnowledge', 'SelfCare',
@@ -32,7 +35,9 @@ svr_perk = [
     'Breakdown', 'AfterCare', 'Distortion',
     'Solidarity', 'Poised', 'HeadOn',
     'FlipFlop', 'BuckleUp', 'MettleOfMan',
-    'BlankPerk',
+    'BetterTogether', 'Fixated', 'InnerStrength',
+    'Babysitter', 'Camaraderie', 'SecondWind',
+    'LuckyBreak', 'AnyMeansNecessary', 'Breakout',
 ]
 
 svr_item = [
@@ -48,7 +53,6 @@ svr_item = [
     'ToolBoxC', 'ToolBoxUC',
     'ToolBoxR1', 'ToolBoxR2',
     'ToolBoxVR1', 'ToolBoxVR2',
-    'BlankItem',
 ]
 
 svr_addon = [
@@ -58,19 +62,16 @@ svr_addon = [
         'LowAmpFilament', 'HeavyDutyBattery',
         'FocusLens', 'LongLifeBattery', 'IntenseHalogen',
         'HighEndSapphireLens', 'OddBulb',
-        'BlankAddon',
     ],
     [  # Key
         'PrayerRope', 'ScratchedPearl', 'PrayerBeads',
         'ErodedToken', 'GoldToken', 'WeavedRing',
-        'MilkyGlass', 'BloodAmber',
-        'BlankAddon',
+        'MilkyGlass', 'BloodAmber', 'UniqueWeddingRing',
     ],
     [  # Map
         'MapAddendum', 'YellowWire', 'UnusualStamp',
         'RetardantJelly', 'RedTwine', 'GlassBead',
         'OddStamp', 'BlackSilkCord', 'CrystalBead',
-        'BlankAddon',
     ],
     [  # MedKit
         'RubberGloves', 'ButterflyTape', 'Bandages',
@@ -78,14 +79,12 @@ svr_addon = [
         'MedicalScissors', 'GauzeRoll', 'SurgicalSuture',
         'GelDressings', 'AbdominalDressing',
         'StypticAgent', 'AntiHaemorrhagicSyringe',
-        'BlankAddon',
     ],
     [  # ToolBox
         'SpringClamp', 'Scraps', 'CleanRag',
         'WireSpool', 'SocketSwivels', 'ProtectiveGloves',
         'Instructions', 'GripWrench', 'CuttingWire',
         'Hacksaw', 'BrandNewPart',
-        'BlankAddon',
     ],
 ]
 
@@ -99,5 +98,8 @@ svr_offering = [
     'MapAsylum', 'MapHaddon', 'MapSwamp',
     'MapLery', 'MapRedForest', 'MapSpringWood',
     'MapGideon', 'MapYamaoka', 'MapOrmond',
-    'BlankOffering',
+]
+
+svr_blank = [
+    'Blank',
 ]
