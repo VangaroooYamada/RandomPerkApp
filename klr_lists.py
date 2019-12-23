@@ -7,6 +7,7 @@ klr_portrait = [
     'Pig', 'Crown',
     'Spirit', 'Legion',
     'Plague', 'GhostFace',
+    'Demogorgon', 'Oni',
 ]
 
 klr_perkC = [
@@ -33,6 +34,8 @@ klr_perkU = [
     'Discordance', 'MadGrit', 'IronMaiden',
     'CorruptIntervention', 'InfectiousFright', 'DarkDevotion',
     'ImAllEars', 'ThrillingTremors', 'FurtiveChase',
+    'Surge', 'CruelLimits', 'MindBreaker',
+    'ZanshinTactics', 'BloodEcho', 'Nemesis',
 ]
 
 klr_addon = [
@@ -181,6 +184,24 @@ klr_addon = [
         'NightVisionMonocular', 'DropLegKnifeSheath', 'DriversLicense',
         'GhostFaceCaughtOnTape', 'OutdoorSecurityCamera',
     ],
+    [  # Demogorgon
+        'RottenPumpkin', 'BlackHeart', 'RatLiver',
+        'RatTail', 'StickyLining', 'ViscousWebbing',
+        'RottenGreenTripe', 'MewsGuts', 'BarbsGlasses',
+        'ElevensSoda', 'ThornyVines', 'BrassCaseLighter',
+        'VioletWaxcap', 'DeerLung', 'LifeguardWhistle',
+        'VermilionWebcap', 'UpsideDownResin', 'UnknownEgg',
+        'LeproseLichen', 'RedMoss',
+    ],
+    [  # Oni
+        'YakuyokeTalisman', 'RottingRope', 'CrackedSakazuki',
+        'BlackenedToenail', 'PolishedMaedate', 'InkLion',
+        'ChippedSaihai', 'ChildsWoodenSword', 'BloodySash',
+        'YamaokaSashimono', 'WoodenOniMask', 'ShatteredWakizashi',
+        'ScalpedTopknot', 'KanaiAnzenTalisman', 'TearSoakedTenugui',
+        'SplinteredHull', 'LionFang', 'AkitosCrutch',
+        'RenjirosBloodyGlove', 'IridescentFamilyCrest',
+    ]
 ]
 
 klr_offering = [
@@ -193,6 +214,7 @@ klr_offering = [
     'MapAsylum', 'MapHaddon', 'MapSwamp',
     'MapLery', 'MapRedForest', 'MapSpringWood',
     'MapGideon', 'MapYamaoka', 'MapOrmond',
+    'MapHawkins',
 ]
 
 klr_blank = [

@@ -7,7 +7,8 @@ svr_portrait = [
     'Tapp', 'Smith',
     'Kate', 'Adam',
     'Jeff', 'Romero',
-    'Ash',
+    'Ash', 'Nancy',
+    'Steve', 'Yui',
 ]
 
 svr_perkC = [
@@ -34,6 +35,9 @@ svr_perkU = [
     'Breakdown', 'AfterCare', 'Distortion',
     'Solidarity', 'Poised', 'HeadOn',
     'FlipFlop', 'BuckleUp', 'MettleOfMan',
+    'BetterTogether', 'Fixated', 'InnerStrength',
+    'Babysitter', 'Camaraderie', 'SecondWind',
+    'LuckyBreak', 'AnyMeansNecessary', 'Breakout',
 ]
 
 svr_item = [
@@ -62,7 +66,7 @@ svr_addon = [
     [  # Key
         'PrayerRope', 'ScratchedPearl', 'PrayerBeads',
         'ErodedToken', 'GoldToken', 'WeavedRing',
-        'MilkyGlass', 'BloodAmber',
+        'MilkyGlass', 'BloodAmber', 'UniqueWeddingRing',
     ],
     [  # Map
         'MapAddendum', 'YellowWire', 'UnusualStamp',
